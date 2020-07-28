@@ -12,6 +12,7 @@ import os
 
 
 #path for model image protext replace the path according to your computer
+
 path_image = "D:/online chapters/anaconda opencv/ml-part/Face-mask/test_images/modi.jpg"
 
 model_path = "D:/online chapters/anaconda opencv/Face-Mask-Detection-master/Face-Mask-Detection-master/model_out/model.h5"
@@ -44,11 +45,7 @@ print("[INFO] computing face detections...")
 net.setInput(blob)
 detections = net.forward()
 
-
-
-
-for i in range(0, detections.shape[2]):
-    
+for i in range(0, detections.shape[2]):    
     confidence = detections[0, 0, i, 2]
     print("confidence: ",confidence)
     if confidence > 0.8:
@@ -71,6 +68,7 @@ for i in range(0, detections.shape[2]):
 			cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
         cv2.rectangle(image, (startX, startY), (endX, endY), color, 2)
         break
+    
 cv2.imshow("Output", image)    
 print("finished")
 cv2.waitKey(0)

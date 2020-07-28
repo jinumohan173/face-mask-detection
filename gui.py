@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 """
 Created on Tue Mar 24 11:34:39 2020
 
@@ -10,6 +10,7 @@ from tkinter import filedialog
 from tkinter import *
 from PIL import ImageTk, Image
 import numpy
+
 # import the necessary packages
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from tensorflow.keras.preprocessing.image import img_to_array
@@ -56,8 +57,7 @@ def detect_mask(file_path):
     print("[INFO] computing face detections...")
     net.setInput(blob)
     detections = net.forward()
-    for i in range(0, detections.shape[2]):
-    
+    for i in range(0, detections.shape[2]):    
         confidence = detections[0, 0, i, 2]
         print("confidence: ",confidence)
         if confidence > 0.8:
@@ -74,9 +74,7 @@ def detect_mask(file_path):
             (mask, withoutMask) = model.predict(face)[0]
             label = "Mask" if mask > withoutMask else "No Mask"
             color = (0, 255, 0) if label == "Mask" else (0, 0, 255)
-            print("label: ",label)
-            #label = "{}: {:.2f}%".format(label, max(mask, withoutMask) * 100)
-            
+            print("label: ",label)                      
             cv2.putText(image, label, (startX, startY - 10),
 			cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
             cv2.rectangle(image, (startX, startY), (endX, endY), color, 2)
