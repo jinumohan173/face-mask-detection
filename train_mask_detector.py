@@ -26,11 +26,11 @@ import os
 
 
 
-dataset_path = "D:/excellence/smart farming/ML part/dataset/with_mask"
+dataset_path = "D:/online chapters/anaconda opencv/ml-part/dataset/"
 
-model_path = "D:/online chapters/anaconda opencv/ml-part/Face-mask/model_out/model.h5"
+model_path = "D:/online chapters/anaconda opencv/ml-part/test_out/model_test.h5"
 
-plot_path = "D:/online chapters/anaconda opencv/ml-part/Face-mask/model_out/plot.jpg"
+plot_path = "D:/online chapters/anaconda opencv/ml-part/test_out/plot_test.jpg"
 
 # initialize the initial learning rate, number of epochs to train for,
 # and batch size

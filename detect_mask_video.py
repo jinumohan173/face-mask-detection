@@ -95,9 +95,9 @@ def detect_and_predict_mask(frame, faceNet, maskNet):
 
 
 
+faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 
-
-faceNet = cv2.dnn.readNetFromDarknet(prototxtPath, weightsPath)
+#faceNet = cv2.dnn.readNetFromDarknet(prototxtPath, weightsPath)
 
 # load the face mask detector model from disk
 print("[INFO] loading face mask detector model...")
