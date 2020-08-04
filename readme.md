@@ -1,7 +1,7 @@
 # How to use this 
 
 youtube link : https://www.youtube.com/playlist?list=PLZmyGSp2E6xcNTmHZR5r8KvUgNlMOukR6
-video link : Machine Learning In Python  demo - part 2 - https://youtu.be/cBbqsr4eVdU
+video link : Mask Detection-Machine Learning In Python part 2 - https://youtu.be/cBbqsr4eVdU
 ## clone/download  the code into pc 
 
 install anaconda
