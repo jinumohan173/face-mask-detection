@@ -10,17 +10,17 @@ anaconda dwonload link https://repo.anaconda.com/archive/Anaconda3-2020.02-Windo
 setup enviornment
 * conda info --env
 
-* conda create -n "enviornment name " python=3.6
+* conda create -n "enviornment name " python=3.8
 
 * conda install -c anaconda spyder
 
-* conda install -c conda-forge opencv
+* pip install -r "path to requirement.txt"
 after install 
 
 open up anaconda change enviornment
-* run the dataSetGenerator.py code 
-* Enter a id num
-* run trainer.py
-* run detector.py
+To see video 
+* run detect_mask_video.py 
+For image loading 
+* run gui.py
 
 Note : please verify path according to your pc
